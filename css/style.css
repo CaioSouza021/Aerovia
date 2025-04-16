@@ -38,6 +38,9 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+
+  transition: 0.5s;
+  z-index: 3;
 }
 
 header .interface {
@@ -49,6 +52,42 @@ header .interface {
 header .logo img {
   max-width: 40px;
 }
+
+/* Estilo do menu dinâmico */
+
+header .logo img.logo-preta {
+  display: none;
+}
+
+header.rolar {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 0 8px #0000007a;
+}
+
+header.rolar .menu-desktop nav ul li a {
+  color: #000;
+}
+
+header.rolar .btn-contato button {
+  border: solid 1px #000;
+  color: black;
+}
+
+header.rolar .btn-contato button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+header.rolar .logo .logo-branca {
+  display: none;
+}
+
+header.rolar .logo .logo-preta {
+  display: block;
+}
+
+/*--------------------------*/
 
 header .menu-desktop nav ul {
   list-style: none;
@@ -78,7 +117,7 @@ header .btn-contato button {
 
 /* Estilo Hero */
 section.hero-site {
-  height: 98vh;
+  height: 100vh;
   background-image: url(../images/teste.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,7 +159,6 @@ section.hero-site {
 }
 
 /* Estilo das vantagens */
-
 section.vantagens {
   padding: 80px 0;
 }
@@ -133,6 +171,20 @@ section.vantagens {
   margin-bottom: 60px;
 }
 
+/* ESTILO ANIMADO */
+.hidden-left {
+  opacity: 1;
+  transform: translateX(20%);
+  transition: all 4s ease-out;
+  will-change: opacity, transform;
+  position: relative;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+/*-----------------------------------------*/
 .vantagens .itens-container .img-itens img {
   max-width: 480px;
 }
@@ -266,4 +318,105 @@ section.hoteis {
   height: 60px;
 }
 
-/* Estilo da sessão como-funciona */
+/* Estilo da sessão como funciona */
+section.como-funciona {
+  padding: 80px 0;
+}
+
+.txt-funciona,
+.instru {
+  display: inline-block;
+  width: 50%;
+  margin-right: -4px;
+  vertical-align: top;
+}
+
+.como-funciona .txt-funciona {
+  position: sticky;
+  top: 50%;
+  padding-bottom: 40px;
+}
+
+.como-funciona .txt-funciona h3 {
+  font-size: 4em;
+  line-height: 65px;
+  font-weight: 300;
+}
+
+.como-funciona .txt-funciona h3 span {
+  font-weight: 800;
+  display: block;
+}
+
+.instru .instru-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 40px;
+  border: solid 2px #000;
+  padding: 20px;
+}
+
+.instru .instru-box img {
+  max-width: 100px;
+}
+
+.instru .instru-box h4 {
+  font-weight: 700;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.instru .instru-box h4 span {
+  font-weight: 300;
+}
+
+.instru .instru-box {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+/* Estilo Footer */
+footer {
+  background-color: #000;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer .top-footer button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+footer .top-footer button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+footer .middle-footer {
+  margin: 20px 0;
+}
+
+footer .middle-footer a {
+  color: #fff;
+  margin: 0 8px;
+}
+
+footer .bottom-footer {
+  border-top: solid 2px #fff;
+}
+
+footer .bottom-footer p {
+  color: white;
+  margin-top: 10px;
+}
