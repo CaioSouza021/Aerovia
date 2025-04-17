@@ -11,6 +11,7 @@ body {
 .interface {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 4%;
 }
 
 header .btn-contato button,
@@ -50,7 +51,7 @@ header .interface {
 }
 
 header .logo img {
-  max-width: 40px;
+  max-width: 30px;
 }
 
 /* Estilo do menu dinâmico */
@@ -115,10 +116,101 @@ header .btn-contato button {
   height: 50px;
 }
 
+/* Estilo do botão do menu mobile */
+
+header .btn-menu-mob {
+  display: none;
+  position: relative;
+  z-index: 4;
+}
+
+header .btn-menu-mob div {
+  background-color: #fff;
+  height: 3px;
+  margin: 10px 0;
+
+  transition: 0.5s;
+}
+
+header .btn-menu-mob .line-menumob-1 {
+  width: 25px;
+}
+header .btn-menu-mob .line-menumob-2 {
+  width: 15px;
+}
+
+header.rolar .btn-menu-mob div {
+  background-color: #000;
+}
+
+header .btn-menu-mob .line-menumob-1.ativo1 {
+  border-radius: 50%;
+  transform: rotate(45deg) translate(35%);
+  background-color: #fff;
+}
+header .btn-menu-mob .line-menumob-2.ativo2 {
+  border-radius: 50%;
+  transform: rotate(-45deg) translate(40%);
+  width: 25px;
+  background-color: #fff;
+}
+
+/* Estilo do menu mobile */
+header .menu-mobile {
+  width: 0%;
+  height: 0vh;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+header .menu-mobile nav {
+  width: 100%;
+}
+
+header .menu-mobile nav ul {
+  list-style-type: none;
+}
+
+header .menu-mobile nav a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 0;
+  display: block;
+}
+
+header .menu-mobile nav a:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #fff;
+  transition: 0.5s;
+}
+
+header .menu-mobile.abrir {
+  width: 100vw;
+  height: 100vh;
+}
+
+body.block {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 /* Estilo Hero */
 section.hero-site {
   height: 100vh;
-  background-image: url(../images/teste.png);
+  background-image: url(../images/bg-inicio-site.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -171,29 +263,15 @@ section.vantagens {
   margin-bottom: 60px;
 }
 
-/* ESTILO ANIMADO */
-.hidden-left {
-  opacity: 1;
-  transform: translateX(20%);
-  transition: all 4s ease-out;
-  will-change: opacity, transform;
-  position: relative;
-}
-
-.show {
-  transform: translateX(0);
-}
-
-/*-----------------------------------------*/
 .vantagens .itens-container .img-itens img {
-  max-width: 480px;
+  max-width: 460px;
 }
 
 .vantagens .itens-container .txt-itens h3 {
   font-weight: 300;
-  font-size: 60px;
+  font-size: 39px;
   margin-bottom: 15px;
-  line-height: 70px;
+  line-height: 45px;
 }
 
 .itens-container .txt-itens h3 .titulo {
@@ -202,6 +280,9 @@ section.vantagens {
 .itens-container .txt-itens h3 .destaque {
   font-size: 800;
   display: block;
+}
+.itens-container .txt-itens p {
+  font-size: 13.2px;
 }
 
 /* Estilo dos botões de contato */
@@ -232,6 +313,11 @@ section.contato {
 
 .contato .icons-contato a {
   text-decoration: none;
+}
+
+.contato .icons-contato a p {
+  font-size: 0.9em;
+  font-weight: 400;
 }
 
 .contato .icons-contato button {
