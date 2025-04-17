@@ -50,8 +50,6 @@
   }
   /* Responsivo dos botôes de contato */
 
-  /* Estilo dos botões de contato */
-
   .txt-contato,
   .icons-contato {
     display: block;
@@ -65,6 +63,11 @@
 
   .contato .txt-contato p {
     margin-bottom: 20px;
+  }
+
+  .contato .icons-contato a p,
+  .contato .icons-contato a i {
+    color: #000;
   }
 
   .contato .icons-contato button {
