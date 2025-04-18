@@ -27,8 +27,6 @@ btnMenuMob.addEventListener("click", () => {
 
 document.addEventListener("scroll", function () {
   const section = document.querySelector(".hoteis");
-  const bg = section?.querySelector("::before"); // isso não funciona, precisamos fazer de outro jeito
-
   const scrollY = window.scrollY;
   const sectionTop = section.offsetTop;
   const sectionHeight = section.offsetHeight;
@@ -37,7 +35,7 @@ document.addEventListener("scroll", function () {
     scrollY + window.innerHeight >= sectionTop &&
     scrollY <= sectionTop + sectionHeight
   ) {
-    const scrolled = (scrollY - sectionTop) * 0.3; // velocidade do efeito
+    const scrolled = (scrollY - sectionTop) * 0.3;
     section.style.setProperty("--parallax", `${scrolled}px`);
   }
 });
