@@ -118,3 +118,75 @@
     font-size: 14px;
   }
 }
+
+/* TESTE PARA O IPHONE */
+
+section.hoteis {
+  height: 600px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Pseudo-elemento para simular o background fixo */
+section.hoteis::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/hotel-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Overlay escura sobre a imagem */
+.hoteis > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000b3;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Conteúdo centralizado */
+.hoteis > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  z-index: 2;
+  position: relative;
+}
+
+.hoteis h3 {
+  font-size: 3em;
+  line-height: 50px;
+  font-weight: 300;
+}
+
+.hoteis h3 span {
+  display: block;
+  font-weight: 600;
+}
+
+.hoteis p {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.hoteis button {
+  width: 220px;
+  height: 60px;
+}
+/* -------------------------------- */
